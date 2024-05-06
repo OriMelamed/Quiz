@@ -1,5 +1,4 @@
 import React, { useCallback, useState } from 'react'
-import quizCompleteImage from '../assets/quiz-complete.png'
 import QUESTIONS from '../questions'
 import Question from './Question'
 import Summary from './Summary'
@@ -20,7 +19,7 @@ export default function Quiz() {
     const handleSkipAnswer = useCallback(() => handleSelectedAnswer(null), [handleSelectedAnswer])
 
     if (quizIsComplete) {
-        return <Summary />
+        return <Summary userAnswers={userAnswers} />
     }
 
 
